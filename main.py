@@ -136,7 +136,7 @@ async def get_books(title: str | None = None, author: str | None = None):
 
 
 @app.get("/books/{book_id}")
-async def get_book_detail(book_id: int, username: str):
+async def get_book_detail(book_id: int):
     for book in books_db:
         if book['id'] == book_id:
             return book
